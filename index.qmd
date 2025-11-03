@@ -1,4 +1,5 @@
 ---
+ust---
 title: "dashboards"
 ---
 
@@ -11,7 +12,7 @@ library(tidyverse)
 library(plotly)
 library(janitor)
 
-penguins <- read_csv("data/penguins_Iter.csv")
+penguins <- read_csv("data/penguins_lter.csv")
 
 penguins <- penguins %>%
   clean_names()
@@ -21,3 +22,25 @@ penguins <- penguins %>%
 Instructions: Make a dashboard with two rows. Row 1 should contain two graphs showing any penguin data you'd like. Row two should contain a table (use knitr::kable and select if you'd like to narrow down the columns). Then customize your dashboard by adding colors, labels, interactivity, etc.
 
 Optional: Add text cards, value boxes, tabs, pages, etc.
+
+## Row 1
+
+```{r}
+ggplot(penguins, aes(culmen_length_mm, island)) +
+         geom_boxplot()
+         
+```
+
+```{r}
+ggplot(penguins, aes(flipper_length_mm, body_mass_g, color = species)) + 
+  geom_point()
+```
+
+## Row 2
+
+```{r}
+penguins <- penguins %>%
+  select(-comments)
+
+knitr::kable(penguins)
+```
