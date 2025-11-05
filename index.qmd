@@ -1,11 +1,12 @@
 ---
-ust---
-title: "dashboards"
+title: "Penguins Dashboards"
+author: "Vlad Tomutiu"
+format: dashboard
 ---
 
-This is a Quarto website.
+This dashboard includes information on Penguins data
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+To learn more about myself, academically, and athletically, here is the link to my [website](https://vladtomutiu.github.io)!
 
 ```{r}
 library(tidyverse)
@@ -19,14 +20,10 @@ penguins <- penguins %>%
 
 ```
 
-Instructions: Make a dashboard with two rows. Row 1 should contain two graphs showing any penguin data you'd like. Row two should contain a table (use knitr::kable and select if you'd like to narrow down the columns). Then customize your dashboard by adding colors, labels, interactivity, etc.
-
-Optional: Add text cards, value boxes, tabs, pages, etc.
-
 ## Row 1
 
 ```{r}
-ggplot(penguins, aes(culmen_length_mm, island)) +
+ggplot(penguins, aes(culmen_length_mm, island, color = species)) +
          geom_boxplot()
          
 ```
