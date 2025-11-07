@@ -1,10 +1,18 @@
 ---
 title: "Penguins Dashboards"
 author: "Vlad Tomutiu"
-format: dashboard
+format:dashboard
 ---
 
-This dashboard includes information on Penguins data
+## This dashboard includes information on Penguins data, showing two visualizations and the penguins data used 
+
+## Box plot visualization
+
+The first visualization is a box plot that contains the culmen length in millimeters for each penguin by island. The data shows that the Adelie Penguins have very similar culmen length, normally a little less then 40 millimeters, and exist on every island. Chinstraps have generally the largest culmens and live on Dream island, and Gentoo are close behind, living on Biscoe island.
+
+## Scatter plot visualization
+
+The second visualization shows a scatter plot of flipper length in millimeters of each individual penguin by their body mass in grams. Here we can see a pretty correlation between flipper length and body mass. We can also see that Chinstrap and Adelie penguins have pretty similar flipper lengths and body masses, with Chinstraps having slightly larger flipper lengths while Adelie have slightly higher body masses. Gentoo Penguins have both larger flipper lengths and body masses then Adelie and Chinstrap Penguins.
 
 To learn more about myself, academically, and athletically, here is the link to my [website](https://vladtomutiu.github.io)!
 
