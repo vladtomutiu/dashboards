@@ -4,9 +4,9 @@ author: "Vlad Tomutiu"
 format: dashboard
 ---
 
-## This dashboard includes information on NBA data, showing Three visualizations and the data used
+## Dashboard
 
-HOW PLAYER ROLES AND SCORING TRENDS SHAPE OUTPUT
+HOW NBA PLAYER ROLES AND SCORING TRENDS SHAPE OUTPUT
 
 The 2023 NBA season dataset used can be found at <https://www.kaggle.com/datasets/amirhosseinmirzaie/nba-players-stats2023-season/code>
 

@@ -1,6 +1,6 @@
 ---
 title: "visualizations"
-format: html
+format: dashboard
 ---
 
 ```{r}
