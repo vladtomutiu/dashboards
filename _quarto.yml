@@ -6,9 +6,6 @@ website:
   title: "dashboards"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
       - href: https://vladtomutiu.github.io
         text: Website
       - href: visualizations.qmd

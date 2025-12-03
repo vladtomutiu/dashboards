@@ -19,3 +19,24 @@ The dataset has every NBA player from the 2023 season, filtered to include only 
 -   Does NBA players +/- (the point differential (points scored minus points allowed) for a team while a specific player is on the court) correlate based on how good of a scorer the player is?
 
 -   Do player positions affect their contribution to specific stats and their overall role on the team?
+
+## Row 1
+
+```{r}
+library(tidyverse)
+library(plotly)
+library(janitor)
+
+nba <- read_csv("data/2023_nba_player_stats.csv")
+
+nba <- nba %>%
+  clean_names()
+
+nba_filtered <- nba %>% 
+  filter(!(pos %in% c("F", "G"))) %>%
+  filter(!(p_name %in% c("Chance Comanche", "Skylar Mays"))) %>%
+  filter(fg_percent >= 30, fg_percent <= 70) %>%
+  mutate(ppg = pts / gp)
+
+knitr::kable(nba_filtered)
+```

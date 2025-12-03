@@ -107,9 +107,3 @@ ggplot(nba_filtered, aes(x = pos, y = pts/gp+ast/gp+reb/gp, fill = pos)) +
   theme_classic() +
   theme(legend.position = "none")
 ```
-
-## Row 3
-
-```{r}
-knitr::kable(nba_filtered)
-```
