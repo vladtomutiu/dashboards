@@ -8,16 +8,12 @@ format: dashboard
 
 HOW NBA PLAYER ROLES AND SCORING TRENDS SHAPE OUTPUT
 
-The 2023 NBA season dataset used can be found at <https://www.kaggle.com/datasets/amirhosseinmirzaie/nba-players-stats2023-season/code>
+The 2023 NBA season data set used can be found at <https://www.kaggle.com/datasets/amirhosseinmirzaie/nba-players-stats2023-season/code>
 
-The dataset has every NBA player from the 2023 season, filtered to include only players that played enough to not create outliars . The data includes player names, positions, age, games played, and statistics like points, rebounds, assists, field goal percentage, and +/-. I made visualizations to answer the questions below:
+The data set has every NBA player from the 2023 season, filtered to include only players that played enough to not create outliers . The data includes player names, positions, age, games played, and statistics like points, rebounds, assists, field goal percentage, and +/-. I made visualizations to answer the questions below:
 
 -   Does NBA players efficiency correlate to scoring output?
-
-<!-- -->
-
 -   Does NBA players +/- (the point differential (points scored minus points allowed) for a team while a specific player is on the court) correlate based on how good of a scorer the player is?
-
 -   Do player positions affect their contribution to specific stats and their overall role on the team?
 
 ## Row 1
