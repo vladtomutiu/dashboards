@@ -21,7 +21,10 @@ nba_filtered <- nba %>%
   filter(!(pos %in% c("F", "G"))) %>%
   filter(!(p_name %in% c("Chance Comanche", "Skylar Mays"))) %>%
   filter(fg_percent >= 30, fg_percent <= 70) %>%
-  mutate(ppg = pts / gp)
+  mutate(ppg = pts / gp,
+         apg = ast / gp,
+         rpg = reb / gp
+         )
 
 p <- ggplot(nba_filtered, aes(x = fg_percent, y = ppg,
                                 text = paste(
@@ -44,7 +47,35 @@ nba_filtered <- nba %>%
   filter(!(pos %in% c("F", "G"))) %>%
   filter(!(p_name %in% c("Chance Comanche", "Skylar Mays"))) %>%
   filter(fg_percent >= 30, fg_percent <= 70) %>%
-  mutate(ppg = pts / gp)
+  mutate(ppg = pts / gp,
+         apg = ast / gp,
+         rpg = reb / gp
+         )
+
+nba_filtered <- nba_filtered %>%
+  pivot_longer(cols = c(ppg, apg, rpg),
+               names_to = "stat",
+               values_to = "value")
+
+
+ggplot(nba_filtered, aes(x = stat, y = value, fill = stat)) +
+  geom_violin(trim = FALSE, alpha = 0.6) +
+  geom_boxplot(width = 0.1, outlier.shape = NA, alpha = 0.5) +
+  labs(title = "Distribution of PPG, APG, and RPG",
+       x = "NBA Metric",
+       y = "Per Game Value") +
+  theme_classic()
+```
+
+```{r}
+nba_filtered <- nba %>% 
+  filter(!(pos %in% c("F", "G"))) %>%
+  filter(!(p_name %in% c("Chance Comanche", "Skylar Mays"))) %>%
+  filter(fg_percent >= 30, fg_percent <= 70) %>%
+  mutate(ppg = pts / gp,
+         apg = ast / gp,
+         rpg = reb / gp
+         )
 
 p <- ggplot(nba_filtered, aes(x = x/gp, y = pts/gp, 
                        text = paste(

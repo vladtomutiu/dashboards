@@ -32,7 +32,10 @@ nba_filtered <- nba %>%
   filter(!(pos %in% c("F", "G"))) %>%
   filter(!(p_name %in% c("Chance Comanche", "Skylar Mays"))) %>%
   filter(fg_percent >= 30, fg_percent <= 70) %>%
-  mutate(ppg = pts / gp)
+  mutate(ppg = pts / gp,
+         apg = ast / gp,
+         rpg = reb / gp
+         )
 
 knitr::kable(nba_filtered)
 ```
